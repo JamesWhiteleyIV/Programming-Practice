@@ -1,55 +1,37 @@
-# Check Permutation 
-# O(2N) = O(N) where N = length of string 
+# URLify 
+# O(N) where N = string length  
 import unittest
 
-def check_permutation(str1, str2):
-    if len(str1) != len(str2):
-        return False
-
-    chars = {}
-    for i in range(len(str1)):
-        char = str1[i]
-        if char in chars: #check if character exists
-            chars[char] += 1 
+def easyURLify(string):
+    ''' replaces all spaces with %20 using standard Python function '''
+    return string.replace(" ", "%20")
+    
+def URLify(string):
+    ''' replaces all spaces with %20 '''
+    final_str = []
+    space = ' '
+    for c in string:
+        if c == space:
+            final_str.append("%20")
         else:
-            chars[char] = 1
+            final_str.append(c)
+    return ''.join(final_str)
 
-    for i in range(len(str2)):
-        char = str2[i]
-        if char in chars:
-            if chars[char] == 0:
-                return False
-            else:
-                chars[char] -= 1
-        else:
-            return False
-
-    return True
-                
             
 class Test(unittest.TestCase):
-    # False data
-    F = (
-        ('jfjfj', 'jfjfA'),
-        ('0001', '1100'),
-        ('wifi', 'fipi')
-    )
+    str1 = "test me"
+    str2 = "testme"
+    str3 = " a b c d "
 
-    # True data
-    T = (
-        ('1100', '0011'),
-        ('kayak', 'kayak'),
-        ('wifi', 'fiwi')
-    )
-
+    def test_easy(self):
+        self.assertEqual(easyURLify(self.str1), "test%20me")
+        self.assertEqual(easyURLify(self.str2), "testme")
+        self.assertEqual(easyURLify(self.str3), "%20a%20b%20c%20d%20")
+ 
     def test_func(self):
-        # False 
-        for strings in self.F:
-            self.assertFalse(check_permutation(*strings))
-        # True 
-        for strings in self.T:
-            self.assertTrue(check_permutation(*strings))
-        
+        self.assertEqual(URLify(self.str1), "test%20me")
+        self.assertEqual(URLify(self.str2), "testme")
+        self.assertEqual(URLify(self.str3), "%20a%20b%20c%20d%20")           
 
 if __name__ == "__main__":
     unittest.main()

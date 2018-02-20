@@ -3,6 +3,7 @@
 import unittest
 
 def check_permutation(str1, str2):
+    ''' returns true if strings are a permutation of one another '''
     if len(str1) != len(str2):
         return False
 
