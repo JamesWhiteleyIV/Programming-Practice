@@ -1,7 +1,7 @@
 # kth to last 
 # O(N) where N = length of linked list 
 import unittest
-from data_structures import Linked_List
+from data_structures.Linked_List import Linked_List
 
 
 def kth_to_last(k, ll):
@@ -25,7 +25,7 @@ def kth_to_last(k, ll):
 
 if __name__ == "__main__":
     print '---------Test 1-------------'
-    ll = Linked_List.Linked_List()
+    ll = Linked_List()
     ll.add_front(1)
     ll.add_back(2)
     ll.add_back(3)

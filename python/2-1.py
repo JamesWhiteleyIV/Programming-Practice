@@ -1,6 +1,6 @@
 # Remove Duplicates
 import unittest
-from data_structures import Linked_List
+from data_structures.Linked_List import Linked_List
 
 # O(N)
 def remove_dups(ll):
@@ -36,7 +36,7 @@ def remove_dups_no_buff(ll):
 
 if __name__ == "__main__":
     print '---------Test 1-------------'
-    ll = Linked_List.Linked_List()
+    ll = Linked_List()
     ll.add_front(4)
     ll.add_back(5)
     ll.add_back(6)
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     remove_dups(ll)
     print ll
     print '---------Test 2-------------'
-    ll = Linked_List.Linked_List()
+    ll = Linked_List()
     ll.add_front(4)
     ll.add_back(5)
     ll.add_back(6)
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     remove_dups_no_buff(ll)
     print ll
     print '---------Test 3-------------'
-    ll = Linked_List.Linked_List()
+    ll = Linked_List()
     print "empty ll:", ll
     print "calling remove dups no buff"
     remove_dups_no_buff(ll)

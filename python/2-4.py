@@ -1,7 +1,7 @@
 # Partition 
 # O(N) where N = # of nodes in Linked List
 import unittest
-from data_structures import Linked_List
+from data_structures.Linked_List import Linked_List
 
 
 def partition(ll, val):
@@ -13,8 +13,8 @@ def partition(ll, val):
         return False
 
     # create 2 linked lists that contain values >= or < val
-    gte_ll = Linked_List.Linked_List() 
-    lt_ll = Linked_List.Linked_List()
+    gte_ll = Linked_List() 
+    lt_ll = Linked_List()
     cur = ll.head
 
     while cur:
@@ -33,7 +33,7 @@ def partition(ll, val):
 
 if __name__ == "__main__":
     print '---------Test 1-------------'
-    ll = Linked_List.Linked_List()
+    ll = Linked_List()
     ll.add_front(1)
     ll.add_back(2)
     ll.add_back(4)
@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
     print '---------Test 2-------------'
     print 'all nodes < val'
-    ll = Linked_List.Linked_List()
+    ll = Linked_List()
     ll.add_front(5)
     ll.add_back(2)
     ll.add_back(4)
@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     print '---------Test 3-------------'
     print 'all nodes >= val'
-    ll = Linked_List.Linked_List()
+    ll = Linked_List()
     ll.add_front(5)
     ll.add_back(2)
     ll.add_back(4)
