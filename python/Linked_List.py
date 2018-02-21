@@ -64,13 +64,14 @@ class Linked_List:
                 cur = cur.next
             cur.next = None
             self.tail = cur
-                
-                
- #class Doubly_Linked_List(Linked_List):
-#    ''' doubly-linked list implementation '''
 
-           
-           
+    def remove_node(self, node):
+        cur = self.head
+        while cur:
+            if cur.next == node:
+                cur.next = cur.next.next
+            cur = cur.next
+       
 
 if __name__ == "__main__":
     print "TESTING SINGLY LINKED LIST"
@@ -129,6 +130,12 @@ if __name__ == "__main__":
     print "Expected: 3->4->5->6"
     print ll
     print "4 length: ", len(ll)
+    for node in ll:
+        if node.data == 5:
+            ll.remove_node(node)
+    print "Expected: 3->4->6"
+    print ll
+    print "3 length: ", len(ll)
     ll.remove_back()
     ll.remove_back()
     ll.remove_back()
