@@ -15,6 +15,7 @@ class Linked_List:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.size = 0
 
     def __iter__(self):
         cur = self.head
@@ -66,11 +67,13 @@ class Linked_List:
             self.tail = cur
 
     def remove_node(self, node):
+        ''' removes node and returns node after removed node '''
         cur = self.head
         while cur:
             if cur.next == node:
                 cur.next = cur.next.next
             cur = cur.next
+        return cur
        
 
 if __name__ == "__main__":
