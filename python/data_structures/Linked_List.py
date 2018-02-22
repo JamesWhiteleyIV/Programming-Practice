@@ -15,7 +15,6 @@ class Linked_List:
     def __init__(self):
         self.head = None
         self.tail = None
-        self.size = 0
 
     def __iter__(self):
         cur = self.head

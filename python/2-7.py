@@ -7,7 +7,7 @@ from data_structures.Linked_List import Node
 
 def intersect(ll1, ll2):
     ''' returns the intersecting node if exists, else return None '''
-    if ll1.head is None or ll2.head is None:
+    if ll1.tail is not ll2.tail: 
         return None
 
     d = {}
@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
     ll2.head = d
     d.next = c 
-    ll2.tail = c 
+    ll2.tail = e 
     #  d -> c
 
     print ll1
