@@ -9,10 +9,11 @@ class Stack():
             yield item
 
     def __str__(self):
-        s = '------Top------\n' 
+        #s = '------Top------\n' 
+        s = ''
         for item in reversed(self.data):
             s += '\t' +  str(item) + '\n'
-        s += '------Bottom------'
+        #s += '------Bottom------'
         return s
 
     def __len__(self):
@@ -36,7 +37,10 @@ class Stack():
 
     # O(1)
     def peek(self):
-        return self.data[self.size() - 1]
+        if not self.is_empty():
+            return self.data[self.size() - 1]
+        return None
+
 
 
 if __name__ == "__main__":
