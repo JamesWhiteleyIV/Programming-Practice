@@ -74,6 +74,10 @@ class Linked_List:
                 cur.next = cur.next.next
             cur = cur.next
         return cur
+
+    def gen(self, *args):
+        for arg in args:
+            self.add_back(arg)
        
 
 if __name__ == "__main__":
