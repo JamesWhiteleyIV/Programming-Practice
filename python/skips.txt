@@ -1,2 +1,5 @@
 2-8
 3-6
+
+BFS in Graph.py
+DFS in Graph.py  note: 4-1.py uses DFS

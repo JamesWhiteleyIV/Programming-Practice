@@ -1,4 +1,5 @@
 # Directed and Unidrected Graph implementations
+# Breadth-first and Depth-first search implementations
 
 class Node:
     def __init__(self, data):
@@ -23,6 +24,9 @@ class Graph:
             data += adj 
             data += '\n'
         return data
+
+    def __len__(self):
+        return len(self.nodes)
 
     def add_node(self, data):
         if data not in self.nodes:
@@ -54,6 +58,7 @@ class Graph:
                 del self.nodes[node].adjacent[n]
         del self.nodes[n]
 
+
     def build(self, connections):
         ''' pass in list of tuples [('A', 'B'), ('B', 'C')] or [('A', 'B', 2), ('B', 'C', 4)] for weighted
             and will create connections from A->B and B->C
@@ -69,26 +74,105 @@ class Graph:
             for node1, node2, weight in connections:
                self.add_edge(node1, node2, weight)
 
+
     def weights(self):
         for node in self.nodes:
             for adj in self.nodes[node].adjacent:
                 weight = self.nodes[node].adjacent[adj]
                 print '(' + str(node) + ', ' +  str(adj) + ',',  str(weight) + ')'
+
+
        
+
+class Simple_Graph:
+    ''' unweighted, directed or undirected graph '''
+    def __init__(self, directed=True):
+        self.data = {}
+        self.directed = directed
+
+
+    def add_node(self, node):
+        if node not in self.data:
+            self.data[node] = [] 
+    
+    def add_edge(self, node1, node2):
+        ''' add edge from node1->node2 '''
+        if node1 in self.data and node2 in self.data: # both nodes must exist
+
+            if node2 not in self.data[node1]: #not already an edge
+                self.data[node1].append(node2)
+
+                if not self.directed:
+                    self.add_edge(node2, node1)
+
+
+    def remove_node(self, node):
+        if node in self.data: #node exists
+            for key in self.data: 
+                if node in self.data[key]: #if a node is connected to del node
+                    self.data[key].remove(node) #del it
+            del self.data[node]
+
+
+    def remove_edge(self, node1, node2):
+        ''' remove edge from node1->node2 '''
+        if node1 in self.data and node2 in self.data: # both nodes must exist
+
+            if node2 in self.data[node1]: 
+                self.data[node1].remove(node2) #del it
+
+                if not self.directed: #undirected graph remove edge from node2->node1 also
+                    self.remove_edge(node2, node1)
+
+
+    def add_nodes(self, nodes):
+        for node in nodes:
+            self.add_node(node)
+            
+
+    def add_edges(self, edges):
+        for node1, node2 in edges:
+            self.add_edge(node1, node2)
+
+    def generate(self):
+        nodes = ('A', 'B', 'C', 'D', 'E', 'F', 'G')
+        edges = (
+            ('A', 'G'),
+            ('A', 'C'),
+            ('B', 'C'),
+            ('E', 'G'),
+            ('E', 'F'),
+            ('F', 'G'),
+            ('D', 'A'),
+            ('D', 'C'),
+            ('G', 'D'),
+            )
+        self.add_nodes(nodes)
+        self.add_edges(edges)
+
+
                    
 if __name__ == "__main__":
-    g = Graph(False)
-    data = [
-        ('A', 'B', 3),
-        ('D', 'C', 10),
-        ('A', 'C', 9),
-        ('B', 'A', 4),
-        ]
-    g.build(data)
-    print g
-    print g.weights()
-    print ''
+    g = Simple_Graph(False)
+    g.generate()
+    print g.data
+    print "Removing node A..."
     g.remove_node('A')
-    print g
+    print g.data
+    print "Removing edge F -> E..."
+    g.remove_edge('F', 'E')
+    print g.data
 
-    print g.weights()
+
+
+
+
+
+
+
+
+
+
+
+
+
