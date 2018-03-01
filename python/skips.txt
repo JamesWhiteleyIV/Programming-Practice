@@ -3,3 +3,8 @@
 
 BFS in Graph.py
 DFS in Graph.py  note: 4-1.py uses DFS
+
+
+
+review:
+4-2 Minimal Tree
