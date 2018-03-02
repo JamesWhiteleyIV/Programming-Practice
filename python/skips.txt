@@ -1,11 +1,20 @@
 2-8
 3-6
 4-3 (not even sure what its asking)
+4-6 (also not sure)
 
 BFS in Graph.py
 DFS in Graph.py  note: 4-1.py uses DFS
 
 
-
 review:
-4-2 Minimal Tree
+    4-2 Minimal Tree
+
+bad answer: 
+    4-7 Build Order
+
+weakness:
+    Trees, for some freaking reason
+
+
+
