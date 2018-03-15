@@ -2,6 +2,7 @@
 3-6
 4-3 (not even sure what its asking)
 4-6 (also not sure)
+4-8 to 4-12
 
 BFS in Graph.py
 DFS in Graph.py  note: 4-1.py uses DFS
@@ -18,3 +19,17 @@ weakness:
 
 
 
+bit tricks:
+    0110 + 0110 is the same as 0110 * 2 so just shifting bits to left once: 1100
+    0100 == 4 so multiplying by this you would shift bits left twice
+        ex: 0100 * 0011 = 1100
+    
+    two's complement:
+        flip bits and add 1 (left most is signed bit)
+
+    logical right shift >>> :
+        shift all bits right 1, put 0 in most sig bit (left-most)
+
+    arithmetic right shift >> :  (roughly divide by 2)
+        shift all bits right 1, put sign bit in most sig bit 
+    
