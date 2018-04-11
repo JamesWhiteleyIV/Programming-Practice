@@ -41,37 +41,36 @@ def find_unvisited(node):
     return None
 
 
-def bfs(root, val):
-    q = [] #init queue
+def dfs(root, val):
+    s = [] #init stack 
+
     root.visited = True
     print "order of node visiting:"
 
     print root.value
-    q.append(root)
+    s.append(root)
 
     # root is goal node
     if root.value == val:
         return
 
-    while q != []:
-        n = q.pop()
-        child = find_unvisited(n)
-
-        while child is not None:
+    #while stack is not empty
+    while s != []:
+        child = find_unvisited(s[-1])
+        if child is None: #reached end, no neighbors
+            s.pop(-1)
+        else:
             child.visited = True
-            q.append(child)
+            s.append(child)
             print child.value
-            child = find_unvisited(n)
-
-    
- 
-           
+            if child.value == val:
+                return
+            
         
        
 
 if __name__ == "__main__":
     root = graph_gen()
-    print "BFS:"
-    bfs(root, 'goal')
-
+    print "DFS:"
+    dfs(root, 'goal')
 
