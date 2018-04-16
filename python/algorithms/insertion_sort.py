@@ -1,7 +1,6 @@
 
 
 def insertion_sort(arr):
-    ''' iterative solution '''
     for i in range(len(arr)):
         num = arr[i]
         for j in reversed(range(i)):
