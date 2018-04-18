@@ -1,12 +1,11 @@
 2-8
 3-6
+
+
+****GO OVER TREE CHAPTER 4
 4-3 (not even sure what its asking)
 4-6 (also not sure)
 4-8 to 4-12
-
-BFS in Graph.py
-DFS in Graph.py  note: 4-1.py uses DFS
-
 
 review:
     4-2 Minimal Tree
@@ -18,7 +17,7 @@ weakness:
     Trees, for some freaking reason
 
 
-
+****GO OVER BIT CHAPTER 5 
 bit tricks:
     0110 + 0110 is the same as 0110 * 2 so just shifting bits to left once: 1100
     0100 == 4 so multiplying by this you would shift bits left twice
