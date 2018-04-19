@@ -1,5 +1,6 @@
 # Robot in a grid
 
+# non - recursive BFS approach
 def find_path(grid):
     '''
         finds a path using modified BFS for a robot that can only go down or right
@@ -38,6 +39,7 @@ def find_path(grid):
                 q.append( (r, c+1) )           
 
     return "No Path Exists"
+
 
 
 
