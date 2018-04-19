@@ -1,23 +1,101 @@
-2-8
-3-6
+To-Do:
 
 
-****GO OVER TREE CHAPTER 4
-4-3 (not even sure what its asking)
-4-6 (also not sure)
-4-8 to 4-12
-
-review:
-    4-2 Minimal Tree
-
-bad answer: 
-    4-7 Build Order
-
-weakness:
-    Trees, for some freaking reason
+****CHAPTER 4 Trees****
+4-3 
+4-2 (review: minimal tree)
+4-6 
+4-7 (poor answer: build order)
+4-8 
+4-9 
+4-10
+4-11
+4-12
 
 
-****GO OVER BIT CHAPTER 5 
+****CHAPTER 5 Bit Manipulation****
+5-1
+5-2
+5-3
+5-4
+5-5
+5-6
+5-7
+5-8
+
+****CHAPTER 7 OOP Design****
+7-2 (just read)
+7-3 (just read)
+7-4
+7-5
+7-6
+7-7
+7-8 (just read)
+7-9 (just read)
+7-10
+7-11
+
+
+****CHAPTER 8 Recursion and Dynamic Programming****
+8-1
+8-2
+8-3
+8-4
+8-5
+8-7
+8-8
+8-9
+8-10
+8-11
+8-12
+8-13
+8-14
+
+
+****CHAPTER 9 System Design and Scalability****
+Read + understand all
+
+
+****CHAPTER 10 Sorting and Searching****
+10-1
+10-2
+10-3
+10-4
+10-5
+10-6
+10-7
+10-8
+10-9
+10-10
+10-11
+
+
+****CHAPTER 11 Testing****
+Read + understand all
+
+
+****CHAPTER 12 C and C++****
+12-1
+12-2
+12-3
+12-4
+12-5
+12-6
+12-7
+12-8
+12-9
+12-10
+12-11
+
+
+****CHAPTER 14 Databases****
+Read + understand all
+
+
+****CHAPTER 15 Threads and Locks****
+Read + understand all
+
+
 bit tricks:
     0110 + 0110 is the same as 0110 * 2 so just shifting bits to left once: 1100
     0100 == 4 so multiplying by this you would shift bits left twice
