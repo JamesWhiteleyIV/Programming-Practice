@@ -37,9 +37,6 @@ To-Do:
 
 
 ****CHAPTER 8 Recursion and Dynamic Programming****
-8-2
-8-3
-8-4
 8-5
 8-7
 8-8
