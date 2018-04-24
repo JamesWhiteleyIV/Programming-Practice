@@ -36,17 +36,6 @@ To-Do:
 7-11
 
 
-****CHAPTER 8 Recursion and Dynamic Programming****
-8-5
-8-7
-8-8
-8-10
-8-11
-8-12
-8-13
-8-14
-
-
 ****CHAPTER 9 System Design and Scalability****
 Read + understand all
 
