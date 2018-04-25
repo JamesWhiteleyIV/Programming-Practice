@@ -24,8 +24,6 @@ To-Do:
 5-8
 
 ****CHAPTER 7 OOP Design****
-7-2 (just read)
-7-3 (just read)
 7-4
 7-5
 7-6
@@ -35,9 +33,6 @@ To-Do:
 7-10
 7-11
 
-
-****CHAPTER 9 System Design and Scalability****
-Read + understand all
 
 
 ****CHAPTER 10 Sorting and Searching****
@@ -54,9 +49,6 @@ Read + understand all
 10-11
 
 
-****CHAPTER 11 Testing****
-Read + understand all
-
 
 ****CHAPTER 12 C and C++****
 12-1
@@ -72,12 +64,6 @@ Read + understand all
 12-11
 
 
-****CHAPTER 14 Databases****
-Read + understand all
-
-
-****CHAPTER 15 Threads and Locks****
-Read + understand all
 
 
 bit tricks:
